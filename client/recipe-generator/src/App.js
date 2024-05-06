@@ -148,7 +148,7 @@ function App() {
     // Construct query parameters
     const queryParams = new URLSearchParams(recipeInputs).toString();
     // Open an SSE connection with these query parameters
-    const url = `http://https://geminitest.onrender.com/recipeStream?${queryParams}`;
+    const url = `https://geminitest.onrender.com/recipeStream?${queryParams}`;
     eventSourceRef.current = new EventSource(url);
 
     eventSourceRef.current.onmessage = (event) => {
